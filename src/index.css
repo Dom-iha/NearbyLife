@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+   a:hover {
+      @apply text-blue cursor-pointer underline;
+   }
 
-    input {
-        @apply p-3 border-b w-full
-    }
+   input:not([type="chekbox"]) {
+      @apply rounded-sm;
+   }
 }
