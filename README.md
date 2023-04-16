@@ -1,6 +1,8 @@
 #
 
-<img src="./src/assets/nearbylife.svg" alt="react-logo" width="150" align="center"/>
+<div align="center">
+<img src="./src/assets/nearbylife.svg" alt="react-logo" width="150" />
+</div>
 
 <br>
 
