@@ -10,4 +10,17 @@
    input:not([type="chekbox"]) {
       @apply rounded-sm;
    }
+
+   .role {
+      grid-template-areas: 
+      'img role'
+      'img desc'
+      ;
+   }
+   .role > h3 {
+      grid-area: role;
+   }
+   .role > p {
+      grid-area: desc;
+   }
 }

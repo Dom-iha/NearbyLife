@@ -7,18 +7,20 @@ import { FcGoogle } from 'react-icons/fc';
 import { BsApple } from 'react-icons/bs';
 
 function SignUp(props) {
-	const loginHandler = (e) => {
+	function handleSignup() {
 		e.preventDefault();
-		console.log('logging in...');
-	};
+		console.log('loading...');
+	}
+	const chooseRole = () => {
+		e.preventDefault();
+		
+	}
 
 	const [showPassword, setShowPassword] = useState(false);
-
+	const inputType = showPassword ? 'text' : 'password';
 	const toggle = () => {
 		setShowPassword((prevState) => !prevState);
 	};
-
-	const inputType = showPassword ? 'text' : 'password';
 
 	return (
 		<section
@@ -37,7 +39,10 @@ function SignUp(props) {
 				<h2 className='text-darkgray font-semibold text-xl'>Sign up</h2>
 				<p className='text-lightgray'>Create a new account</p>
 			</div>
-			<Form className='grid rounded-xl gap-6 bg-white p-2 text-fade relative'>
+			<Form
+				className='grid rounded-xl gap-6 bg-white p-2 text-fade relative'
+				onSubmit={handleSignup}
+			>
 				<InputGroup
 					id='name'
 					for='name'
@@ -73,20 +78,22 @@ function SignUp(props) {
 					placeholder='Confirm Password'
 				/>
 				<div className='text-center'>
-					<p className='text-sm text-gray'>
+					<p className='text-sm text-gray my-2'>
 						By signing you agree to our{' '}
 						<a className='text-darkblue font-medium'>Terms of use</a> and
 						<a className='text-darkblue font-medium'> privacy notice</a>
 					</p>
 				</div>
-				<Button className='bg-darkblue hover:bg-blue transition text-white p-2.5 outline-offset-2 outline-blue'>
+				<Button
+					className='bg-darkblue hover:bg-blue transition text-white p-2.5 outline-offset-2 outline-blue'
+					onClick={chooseRole}
+				>
 					Sign up
 				</Button>
 				<p className='text-center text-lightgray text-sm'>
 					Or continue with
 				</p>
 				<div className='flex gap-2 justify-self-center'>
-					<Button></Button>
 					<Button>
 						<FcGoogle />
 					</Button>
