@@ -11,16 +11,40 @@
       @apply rounded-sm;
    }
 
-   .role {
+   /* .role {
+      grid-template-columns: auto 1fr;
       grid-template-areas: 
       'img role'
       'img desc'
       ;
+   }
+   .role > img {
+      grid-area: img;
    }
    .role > h3 {
       grid-area: role;
    }
    .role > p {
       grid-area: desc;
+   } */
+
+   .roles {
+      grid-template-columns: auto 1fr;
+      grid-template-areas: 
+      'img role check'
+      'img desc check'
+      ;
+   }
+   .roles > img {
+      grid-area: img;
+   }
+   .roles > h3 {
+      grid-area: role;
+   }
+   .roles > p {
+      grid-area: desc;
+   }
+   .roles > svg {
+      grid-area: check;
    }
 }

@@ -1,32 +1,32 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import Form from '../../components/ui/Form';
 import Logo from '../../components/ui/Logo';
 import Button from '../../components/ui/Button';
 import InputGroup from '../../components/ui/InputGroup';
 import { FcGoogle } from 'react-icons/fc';
 import { BsApple } from 'react-icons/bs';
+import AuthContext from '../../context/auth-context';
+import ThanksModal from '../../components/modals/Thanks';
 
 function SignUp(props) {
-	function handleSignup() {
+	function handleSignup(e) {
 		e.preventDefault();
 		console.log('loading...');
 	}
-	const chooseRole = () => {
+	const chooseRole = (e) => {
 		e.preventDefault();
-		
-	}
-
-	const [showPassword, setShowPassword] = useState(false);
-	const inputType = showPassword ? 'text' : 'password';
-	const toggle = () => {
-		setShowPassword((prevState) => !prevState);
+		passCtx.openModal();
 	};
 
+	const passCtx = useContext(AuthContext);
+	
 	return (
+		
 		<section
 			id='signup'
 			className='grid min-h-screen place-items-center bg-white p-3.5'
 		>
+			<ThanksModal />
 			<div className='grid place-items-center mt-8'>
 				<div className='rounded-md p-2 bg-splash w-fit'>
 					<Logo className='mx-auto w-[26.46px] h-[24.28px]' />
@@ -40,7 +40,7 @@ function SignUp(props) {
 				<p className='text-lightgray'>Create a new account</p>
 			</div>
 			<Form
-				className='grid rounded-xl gap-6 bg-white p-2 text-fade relative'
+				className='grid w-full rounded-xl gap-6 bg-white p-2 text-fade relative'
 				onSubmit={handleSignup}
 			>
 				<InputGroup
@@ -60,21 +60,19 @@ function SignUp(props) {
 				<InputGroup
 					id='password'
 					for='password'
-					type={inputType}
-					show={inputType}
+					type={passCtx.type}
+					show={passCtx.type}
 					label='Password'
-					onToggle={toggle}
-					isVisible={showPassword}
+					isVisible={passCtx.showPassword}
 					placeholder='Password'
 				/>
 				<InputGroup
 					id='confirm'
 					for='confirm'
-					type={inputType}
-					show={inputType}
+					type={passCtx.type}
+					show={passCtx.type}
 					label='Confirm Password'
-					onToggle={toggle}
-					isVisible={showPassword}
+					isVisible={passCtx.showPassword}
 					placeholder='Confirm Password'
 				/>
 				<div className='text-center'>

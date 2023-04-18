@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import SplashScreen from "../components/SplashScreen";
 import Login from "./Auth/Login";
 import SignUp from "./Auth/SignUp";
+import ChooseRole from "./Auth/ChooseRole";
 
 function AuthPages() {
-   const [showSplash, setShowSplash] = useState(true);
+   const [showSplash, setShowSplash] = useState(false);
    const [showSignup, setShowSignup] = useState(false);
 
    const handleSwitch = () => {
@@ -15,7 +16,7 @@ function AuthPages() {
    }
 
    const form = showSignup ? <SignUp onSwitch={switchBack}/> : <Login onSwitch={handleSwitch}/>
-
+   // <ChooseRole onSwitch={switchBack}/>
    useEffect(() => {
       const timeoutId = setTimeout(() => {
          setShowSplash(false);
@@ -26,7 +27,7 @@ function AuthPages() {
       };
    }, []);
 
-   return <>{showSplash ? <SplashScreen /> : form}</>;
+   return <>{showSplash ? <SplashScreen /> : <ChooseRole />}</>;
 }
 
 export default AuthPages;
