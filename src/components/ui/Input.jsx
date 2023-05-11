@@ -2,7 +2,7 @@ import { CiMail } from 'react-icons/ci';
 import { MdLock } from 'react-icons/md';
 import { FaEyeSlash, FaEye } from 'react-icons/fa';
 import { useContext } from 'react';
-import AuthContext from '../../context/auth-context';
+import AuthContext from '../../context/AuthContext';
 import Button from './Button';
 
 const Input = ({ label, type, placeholder, show }) => {

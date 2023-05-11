@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import Form from '../../components/ui/Form';
 import Logo from '../../components/ui/Logo';
 import Button from '../../components/ui/Button';
-import AuthContext from '../../context/auth-context';
+import AuthContext from '../../context/AuthContext';
 import InputGroup from '../../components/ui/InputGroup';
 import ResetPass from '../../components/modals/ResetPass';
 import ForgotPass from '../../components/modals/PasswordModal';

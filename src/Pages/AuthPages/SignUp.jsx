@@ -5,7 +5,7 @@ import Button from '../../components/ui/Button';
 import InputGroup from '../../components/ui/InputGroup';
 import { FcGoogle } from 'react-icons/fc';
 import { BsApple } from 'react-icons/bs';
-import AuthContext from '../../context/auth-context';
+import AuthContext from '../../context/AuthContext';
 import ThanksModal from '../../components/modals/Thanks';
 
 function SignUp(props) {

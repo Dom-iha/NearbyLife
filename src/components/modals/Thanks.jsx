@@ -1,7 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react';
 import Button from '../ui/Button';
 import { useContext } from 'react';
-import AuthContext from '../../context/auth-context';
+import AuthContext from '../../context/AuthContext';
 import Envelope from '../ui/Envelope';
 
 function Modal() {

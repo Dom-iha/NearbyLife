@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import Button from '../ui/Button';
 import Input from '../ui/Input';
 import Form from '../ui/Form';
-import AuthContext from '../../context/auth-context';
+import AuthContext from '../../context/AuthContext';
 
 function ResetPass() {
 	const modalCtx = useContext(AuthContext);

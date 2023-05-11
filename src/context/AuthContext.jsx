@@ -4,7 +4,7 @@ const AuthContext = createContext({
 	isLoggedIn: false,
 	showPassword: false,
 	isValid: true,
-	toggle: (id) => {},
+	toggle: () => {},
 	type: '',
 	isOpen: false,
 	openModal: () => {},
