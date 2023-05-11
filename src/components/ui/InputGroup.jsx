@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Button from "./Button";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
-import AuthContext from "../../context/auth-context";
+import AuthContext from "../../context/AuthContext";
 
 const InputGroup = (props) => {
    const passCtx = useContext(AuthContext)

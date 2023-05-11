@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import AuthContext from './auth-context';
+import AuthContext from './AuthContext';
 
 const AuthProvider = ({ children }) => {
-	const [isLoggedIn, setIsLoggedIn] = useState(false);
+	const [isLoggedIn, setIsLoggedIn] = useState(true);
 
 	const [showPassword, setShowPassword] = useState(false);
 	const inputType = showPassword ? 'text' : 'password';

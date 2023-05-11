@@ -1,6 +1,6 @@
 function MainPages() {
    return <>
-   
+   Hello world
    </>;
 }
 
